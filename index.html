@@ -3,100 +3,176 @@
   <head>
     <meta charset="utf-8">
     <title>Graham Spencer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!-- J QUERY SMOOTH SCROLL -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>$(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+    </script>
   </head>
   <body>
+
     <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href='resources/resume.pdf' download>Resume</a></li>
-        <li><<a href="mailto:grahamspence@gmail.com">Email</a></li>
+      <ul class="text-center">
+        <li class="keep smoothScroll">
+          <a class="text-uppercase" href="#about">About</a>
+        </li>
+        <li class="keep smoothScroll">
+          <a class="text-uppercase" href="#technical_skills">Technical Skills</a>
+        </li>
+        <li class="keep smoothScroll">
+          <a class="text-uppercase" href="#contact">Contact</a>
+        </li>
       </ul>
     </nav>
-    <h1>Graham Spencer</h1>
-    <h2>Full-stack Web Developer</h2>
-    <hr>
 
-    <div id="about">
-      <h3>About</h3>
-      <p>Hello there! My name's Graham, and I'm a full-stack web developer with a background in writing. I have experience in Ruby, Rails, Javascript, HTML and CSS. I'm hardworking, creative, and I work well in teams.</p>
-    </div>
-
-    <div class="education">
-
-      <h3>Education</h3>
-
-      <p>Web Development Certificate - Bitmaker: General Assembly (2018-2018)</p>
-      <p>Bachelor of Arts: Creative/Professional Writing - York University (2005-2009)</p>
-
-      <h3>Employment History</h3>
-
-      <p><strong>Freelance Full-Stack Web Developer (2018-Present)</strong></p>
-      <ul class="descriptions">
-        <li>Working on a multitude of projects involving Javascript, React, Ruby, and other languages/libraries</li>
-      </ul>
-      <p><strong>Transcription Lead - Vice Media (2015-2018)</strong></p>
-      <ul class="descriptions">
-        <li>Provided closed captions for Viceland Canada's TV shows</li>
-        <li>Managed a team of freelance transcribers for pre-production work</li>
-        <li>Assisted in producing content for Daily Vice team</li>
-      </ul>
-      <p><strong>Closed Captioner - Quay Media Services (2013-2015)</strong></p>
-      <ul class="descriptions">
-        <li>Provided closed captions for Corus Entertainment TV shows</li>
-        <li>Worked under deadlines for rushed projects</li>
-      </ul>
-      <p><strong>Editor - Whatswhat Inc (2012-2013)</strong></p>
-      <ul class="descriptions">
-        <li>Creative content lead at start-up</li>
-        <li>Wrote, researched, and proofread copy for various businesses</li>
-        <li>Managed creative content to reflect the company's brand</li>
-      </ul>
-
-      <h3>Skills</h3>
-
-      <p>HTML</p>
-      <div class="container">
-        <div class="skills html">90%</div>
+    <section class="bg-grey">
+      <div class="container site-title-container text-center">
+        <h1 class="h1 site-title title-uppercase">Graham Spencer</h1>
+        <h2 class="site-title-subtitle">Full-stack Web Developer</h2>
       </div>
+    </section>
 
-      <p>CSS</p>
-      <div class="container">
-        <div class="skills css">90%</div>
+    <section>
+      <div id="about" class="container section-container">
+        <div class="about-text">
+          <h3 class="h3">Hello there!</h3>
+          <p>My name's Graham, and I'm a full-stack web developer with a background in writing. I have experience in Ruby, Rails, Javascript, HTML and CSS. I'm hardworking, creative, and I work well in teams.</p>
+        </div>
+        <div class="about-img">
+          <img src="img/graham_spencer.jpg" alt="Graham Spencer">
+        </div>
       </div>
+      <div class="history bg-grey">
+        <div id="education" class="container section-container">
+          <h3 class="h2 title">Education</h3>
+          <div class="mini-section">
+            <p><span class="text-uppercase bold">Web Development Certificate</span> <br /> <i>Bitmaker: General Assembly</i> | 2018&nbsp;-&nbsp;2018</p>
+          </div>
+          <div class="mini-section">
+            <p><span class="text-uppercase bold">Bachelor of Arts: Creative/Professional Writing</span> <br /> <i>York University</i> | 2005&nbsp;-&nbsp;2009</p>
+          </div>
+        </div>
+   
 
-      <p>Ruby</p>
-      <div class="container">
-        <div class="skills ruby">80%</div>
+        <div id="employment-history" class="container section-container">
+          <h3 class="h2 title">Employment History</h3>
+          <div class="mini-section">
+            <p><span class="text-uppercase bold">Transcription Lead</span> <br /> <i>Vice Media</i> | 2015&nbsp;-&nbsp;2018</p>
+            <ul class="employment-description">
+              <li>Provided closed captions for Viceland Canada's Television programs</li>
+              <li>Managed a team of freelance transcribers for pre-production work</li>
+              <li>Assisted in producing content for the Daily Vice team</li>
+            </ul>
+          </div>
+        
+          <div class="mini-section">
+            <p><span class="text-uppercase bold">Closed Captioner</span> <br /> <i>Quay Media Services</i> | 2013&nbsp;-&nbsp;2015</p>
+            <ul class="employment-description">
+              <li>Provided closed captions for Corus Entertainment TV shows</li>
+              <li>Worked under deadlines for rushed projects</li>
+            </ul>
+          </div>
+
+          <div class="mini-section">
+            <p><span class="text-uppercase bold">Editor</span> <br /> <i>Whatswhat Inc</i> | 2012&nbsp;-&nbsp;2013</p>
+            <ul class="employment-description">
+              <li>Creative content lead at start-up</li>
+              <li>Wrote, researched, and proofread copy for various businesses</li>
+              <li>Managed creative content to reflect the company's brand</li>
+            </ul>
+          </div>
+
+          <div class="btn-container">
+            <a class="btn" href='resources/resume.pdf' download>Download my Résumé</a>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <p>Rails</p>
-      <div class="container">
-        <div class="skills rails">80%</div>
+    <section>
+      <div id="technical_skills" class="container section-container">
+        <h3 class="h2 title">Technical Skills</h3>
+        <div class="technical-skills-container">
+          <div class="technical-skill">
+            <p>HTML</p>
+            <div class="skills-container">
+              <div class="skills html">90%</div>
+            </div>
+          </div>
+
+          <div class="technical-skill">
+            <p>Rails</p>
+            <div class="skills-container">
+              <div class="skills rails">80%</div>
+            </div>
+          </div>
+
+          <div class="technical-skill">
+            <p>CSS</p>
+            <div class="skills-container">
+              <div class="skills css">90%</div>
+            </div>
+          </div>
+          
+          <div class="technical-skill">
+            <p>Ruby</p>
+            <div class="skills-container">
+              <div class="skills ruby">80%</div>
+            </div>
+          </div>
+
+          <div class="technical-skill">
+            <p>Github</p>
+            <div class="skills-container">
+              <div class="skills github">90%</div>
+            </div>
+          </div>
+        
+          <div class="technical-skill">
+            <p>JavaScript</p>
+            <div class="skills-container">
+              <div class="skills js">70%</div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <p>JavaScript</p>
-      <div class="container">
-        <div class="skills js">70%</div>
+    <section class="bg-grey">
+      <div id="contact" class="container section-container">
+        <h3 class="h2 title">Contact</h3>
+        <p class="h3">I'm Open!</p>
+        <p>I am currently open to explore contract / full-time full-stack web development opportunities. Please feel free to reach out to me below:</p>
+        <br />
+        <p><a class="link" href="tel:14163331654"><i class="fas fa-phone"></i> 416-333-1654</a></p>
+        <p><a class="link" href="mailto:grahamspence@gmail.com"><i class="far fa-envelope"></i> grahamspence@gmail.com</a></p>
+        <p><a class="link" href="https://github.com/grahamspencer1"><i class="fab fa-github"></i> Github </a></p>
+        <p><a class="link" href="https://www.linkedin.com/in/graham-spencer-bb133327/"><i class="fab fa-linkedin"></i> LinkedIn </a></p>
       </div>
+    </section>
 
-      <p>Github</p>
+    <footer>
       <div class="container">
-        <div class="skills github">90%</div>
+        <small>Graham Spencer &copy; 2018</small>
       </div>
-
-    </div>
-
-    <div id="contact">
-      <h3>Contact</h3>
-      <p>Phone - 416-333-1654</p>
-      <p>Email - grahamspence@gmail.com</p>
-      <p><a href="https://github.com/grahamspencer1">Github</a> | <a href="https://www.linkedin.com/in/graham-spencer-bb133327/">LinkedIn</a></p>
-    </div>
+    </footer>
   </body>
-  <footer>
-    <p>Graham Spencer &copy; 2018</p>
-  </footer>
 </html>
